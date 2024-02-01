@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
+  ],
+  "plugins": [
+    "@tanstack/query",
+    "hooks"
+  ],
+  "rules": {
+    "hooks/sort": [
+      2,
+      {
+        "groups": [
+          "useReducer",
+          "useContext",
+          "useState",
+          "useRef",
+          "useDispatch",
+          "useCallback",
+          "useEffect"
+        ]
+      }
+    ]
+  }
+}

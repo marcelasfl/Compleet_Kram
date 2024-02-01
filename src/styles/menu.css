@@ -1,0 +1,13 @@
+.ant-menu-root.main {
+  .ant-menu-item {
+    border-radius: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    width: 100%;
+  }
+
+  & .ant-menu-item-selected {
+    border-right-width: 2px !important;
+    border-right-style: solid !important;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Welcome!",
+  "description": {
+    "part1": "This is just a basic example of how to use i18next with typescript",
+    "part2": "😉"
+  },
+  "inter": "interpolated {{val}}",
+  "open": "Abrir {{noun}}",
+  "box": "Caixa",
+  "value": "Valor",
+  "search": "Pesquisar",
+  "quantity": "Quantidade",
+  "exames": "Exames",
+  "exame": "Exame",
+  "patients": "Pacientes",
+  "patient": "Paciente",
+  "duplicate": "Duplicar",
+  "cancel": "Cancelar",
+  "crud": {
+    "add": "Adicionar {{entity}}",
+    "edit": "Editar {{entity}}",
+    "success": {
+      "edit": "{{entity}} editado com sucesso!",
+      "add": "{{entity}} adicionado com sucesso!"
+    }
+  }
+}

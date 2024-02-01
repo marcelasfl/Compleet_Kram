@@ -1,0 +1,824 @@
+{
+	"info": {
+		"_postman_id": "b19d549c-5dbb-4e87-9f6d-70c573a917e0",
+		"name": "Hormonal Control",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18886574"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":123,\r\n    \"email\":\"vicente@teste.com\",\r\n    \"name\":\"vicente\",\r\n    \"idProfile\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exam Group",
+			"item": [
+				{
+					"name": "Get All Exams Group",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/examsGroup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examsGroup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Exam Group",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQGhvdG1haWwuY29tIiwicm9sZSI6IlJPTEVfQURNSU4iLCJpc3MiOiJIb3Jtb25hbENvbnRyb2wiLCJpZCI6MSwibm9tZUNsaWVudGUiOiJ2aWNlbnRlIiwiZXhwIjoxNjkyNDgyODYxfQ.4qEErWOfRLUtnDwY7QgDhl78iAD_DEjnZBx0LMxNRms",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/examsGroup/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examsGroup",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Exam Group",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"active\":false,\r\n   \"company_id\":1,\r\n   \"name\":\"vicentazaoa\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/examsGroup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examsGroup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Exam Group",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"active\":false,\r\n   \"name\":\"vicente\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/examsGroup/14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examsGroup",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Exam Group",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/examsGroup/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examsGroup",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Get Company By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/company",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"company"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Company By ID Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoxLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDE1Mzg2NTR9.gvpeS5hgRQB-z_tgNt6xS20oP9RFZVXqQZLlAOeQ1QM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/swagger-ui/index.html",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"swagger-ui",
+								"index.html"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exam",
+			"item": [
+				{
+					"name": "Create exam required fields",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoxLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDE4MzAwNDF9.Np9RZp66HoFPrm7BE5uwQwkEa4_Oe9iFNjdus5nFBwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"code\":\"123\",\r\n    \"fasting\":true,\r\n    \"examGroup\":2,\r\n    \"laboratory\":1,\r\n    \"company\":1,\r\n    \"name\":\"THC\",\r\n    \"active\":true\r\n    \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/exams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create exam all fields",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoxLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDE4MzAwNDF9.Np9RZp66HoFPrm7BE5uwQwkEa4_Oe9iFNjdus5nFBwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"active\":true,\r\n    \"code\":\"123\",\r\n    \"company\":1,\r\n    \"name\":\"THC\",\r\n    \"laboratory\":1,\r\n    \"examGroup\":2,\r\n    \"genre\":\"F\",\r\n    \"minAgePatient\":10,\r\n    \"maxAgePatient\":20,\r\n    \"menstrualPeriod\":\"FOLICULAR\",\r\n    \"fasting\":true,\r\n    \"observation\":\"Any description\",\r\n    \"referenceValues\":{\r\n        \"comparisonOperator\":\"FROM_TO\",\r\n        \"lowerValue\":200,\r\n        \"highestValue\":1000,\r\n        \"unitMeasurement\":2,\r\n        \"comparisonOperatorIdeal\":\"FROM_TO\",\r\n        \"lowerValueIdeal\":200,\r\n        \"highestValueIdeal\":1000,\r\n        \"unitMeasurementIdeal\":2  \r\n\r\n    }\r\n   \r\n   \r\n   \r\n    \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/exams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update exam",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoxLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDE4MzAwNDF9.Np9RZp66HoFPrm7BE5uwQwkEa4_Oe9iFNjdus5nFBwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"id\":2,\r\n    \"code\":\"123\",\r\n    \"fasting\":true,\r\n    \"examGroup\":2,\r\n    \"laboratory\":1,\r\n    \"company\":1,\r\n    \"name\":\"THC\",\r\n    \"active\":true\r\n\r\n\r\n   \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/exams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create exam full",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoyLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDA2NjA0MDB9.dgF_JtXjj-i8tTLn_CrQdjHBWQg_EvCjc5UeTSr1GZo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"code\":\"123\",\r\n    \"fasting\":true,\r\n    \"examGroup\":2,\r\n    \"laboratory\":1,\r\n    \"company\":1,\r\n    \"name\":\"THC\",\r\n    \"active\":true,\r\n    \"genre\":\"M\",\r\n    \"idealResult\":\"200\",\r\n    \"minAgePatient\":12,\r\n    \"maxAgePatient\":20,\r\n    \"menstrualPeriod\":\"GRAVIDA1\",\r\n    \"observation\":\"observe\",\r\n    \"referenceValue\":{\r\n        \"comparisonOperator\":\"FROM_TO\",\r\n        \"lowerValue\":130,\r\n        \"highestValue\":500,\r\n        \"unitMeasurement\":\"µg_dL\"\r\n\r\n\r\n    }\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/exams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update exam full",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoxLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDE4MzAwNDF9.Np9RZp66HoFPrm7BE5uwQwkEa4_Oe9iFNjdus5nFBwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"id\":2,\r\n    \"code\":\"123\",\r\n    \"fasting\":true,\r\n    \"examGroup\":2,\r\n    \"laboratory\":1,\r\n    \"company\":1,\r\n    \"name\":\"THC\",\r\n    \"active\":true,\r\n    \"referenceValues\":{\r\n        \"comparisonOperator\":\"FROM_TO\",\r\n        \"lowerValue\":200,\r\n        \"highestValue\":1000,\r\n        \"unitMeasurement\":2,\r\n        \"comparisonOperatorIdeal\":\"FROM_TO\",\r\n        \"lowerValueIdeal\":200,\r\n        \"highestValueIdeal\":1000,\r\n        \"unitMeasurementIdeal\":2  \r\n\r\n    }\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/exams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Exams",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoxLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDE4MzAwNDF9.Np9RZp66HoFPrm7BE5uwQwkEa4_Oe9iFNjdus5nFBwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/exams",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exams"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Exam by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoyLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDEzNTE5MDJ9.g4xQbpvkbUFmkKWC_iDZBUuphenrk4P56L-s71_stQQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/exams/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"exams",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": []
+		},
+		{
+			"name": "Laboratory",
+			"item": [
+				{
+					"name": "Get all Laboratory",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Laboratory",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Tajara\",\r\n    \"company_id\":1,\r\n    \"active\":true\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/laboratory",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"laboratory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Laboratory",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/laboratory/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"laboratory",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Unit Measurement",
+			"item": [
+				{
+					"name": "Create Unit Measurement",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoxLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDE4MzAwNDF9.Np9RZp66HoFPrm7BE5uwQwkEa4_Oe9iFNjdus5nFBwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"acronym\":\"AS\",\r\n    \"active\":true,\r\n    \"company_id\":\"1\",\r\n    \"name\":\"Litros\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/units-measurement",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"units-measurement"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pagination Unit Measurement",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoxLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDE4MzAwNDF9.Np9RZp66HoFPrm7BE5uwQwkEa4_Oe9iFNjdus5nFBwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/units-measurement/pagination?companyId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"units-measurement",
+								"pagination"
+							],
+							"query": [
+								{
+									"key": "companyId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Unit Measurement",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoxLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDE4MzAwNDF9.Np9RZp66HoFPrm7BE5uwQwkEa4_Oe9iFNjdus5nFBwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/units-measurement?companyId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"units-measurement"
+							],
+							"query": [
+								{
+									"key": "companyId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Unit Measurement By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoxLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDE4MzAwNDF9.Np9RZp66HoFPrm7BE5uwQwkEa4_Oe9iFNjdus5nFBwA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/units-measurement/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"units-measurement",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Unit Measurement By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoxLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDE3MTYxNTd9.iLuCFMHhQH1jJXbidjlCkwv-vRw-1gsL8jmfTZxlm6c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/units-measurement/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"units-measurement",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Unit Measurement",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNlbnRlQHRlc3RlLmNvbSIsInJvbGUiOiJBRE1JTiIsImlzcyI6Ikhvcm1vbmFsQ29udHJvbCIsImNvbXBhbnkiOjEsImlkIjoxLCJub21lQ2xpZW50ZSI6InZpY2VudGUiLCJleHAiOjE3MDE3MTYxNTd9.iLuCFMHhQH1jJXbidjlCkwv-vRw-1gsL8jmfTZxlm6c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"acronym\":\"MG EDIT\",\r\n    \"active\":true,\r\n    \"company_id\":\"1\",\r\n    \"name\":\"Litros EDIT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/units-measurement/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"units-measurement",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\":\"vicente@teste.com\",\r\n    \"password\":123\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
